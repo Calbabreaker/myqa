@@ -1,0 +1,18 @@
+{% if not partial %}
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>{% block title %}Page{% endblock %}</title>
+        <link href="tailwind-out.css" rel="stylesheet" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/htmx/2.0.3/htmx.min.js" integrity="sha512-dQu3OKLMpRu85mW24LA1CUZG67BgLPR8Px3mcxmpdyijgl1UpCM1RtJoQP6h8UkufSnaHVRTUx98EQT9fcKohw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    </head>
+    <body class="p-2">
+        {% include "navbar.html" %}
+{% endif %}
+        <main>{% block content %}{% endblock %}</main>
+{% if not partial %}
+    </body>
+</html>
+{% endif %}

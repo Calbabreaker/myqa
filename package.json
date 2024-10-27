@@ -1,0 +1,16 @@
+{
+    "name": "myqa",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "build": "NODE_ENV=production tailwindcss build -o ./static/tailwind-out.css -m",
+        "watch": "tailwindcss build -w -o ./static/tailwind-out.css -m"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "tailwindcss": "^3.4.13"
+    }
+}
